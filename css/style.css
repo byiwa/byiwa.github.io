@@ -1,0 +1,368 @@
+@import url('fonts.css');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-16);
+    color: var(--color-font-dark);
+    background-color: var(--color-page-bg);
+}
+
+body.casePage {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-bold);
+}
+
+a {
+    display: contents;
+}
+
+a:visited {
+    color: inherit !important;
+}
+
+.pageWrapper {
+    display: grid;
+    grid-auto-flow: column;
+    height: 100vh;
+    width: 100vw;
+    padding: 0 var(--space-24) 0 var(--space-24);
+}
+
+.pageWrapper.case {
+    padding-top: 8rem;
+    align-items: center;
+}
+
+.showcase {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    row-gap: var(--space-8);
+    width: 100%;
+    max-width: 960px;
+    min-width: 780px;
+}
+
+.showcaseTitle {
+    width: 100%;
+    padding: 0 0 0 var(--space-8);
+    opacity: 0;
+    /* start invisible */
+    animation: fadeIn 0.3s ease-out 0.2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.showcaseContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--space-12);
+    width: 100%;
+}
+
+.cover {
+    border-radius: var(--space-48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    opacity: 0;
+    /* make sure they expand from their own center */
+    transform-origin: center center;
+}
+
+.cover.item-tiktok {
+    animation: expandFromCenter 0.2s ease-out 0.2s forwards;
+}
+
+.cover.item-miravia {
+    animation: expandFromCenter 0.2s ease-out 0.4s forwards;
+}
+
+.cover.item-factorem,
+.cover.item-lazada {
+    animation: expandFromCenter 0.2s ease-in 0.6s forwards;
+}
+
+.cover.item-personal {
+    animation: expandFromCenter 0.2s ease-in 0.4s forwards;
+}
+
+.cover.link {
+    animation: expandFromCenter 0.2s ease-out 0.4s forwards;
+}
+
+@keyframes expandFromCenter {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.hero {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: 1 / 1;
+}
+
+.medium {
+    grid-column: span 2;
+}
+
+.link {
+    border-radius: 50%;
+}
+
+.logo160 {
+    max-width: 160px;
+}
+
+.logo120 {
+    max-width: 120px;
+}
+
+.icon48 {
+    max-width: 48px;
+}
+
+.emoji {
+    font-size: var(--font-size-48);
+}
+
+.item-tiktok {
+    background-color: var(--color-case-tiktok);
+}
+
+.item-factorem {
+    background-color: var(--color-case-factorem);
+}
+
+.item-email {
+    background-color: var(--color-social-gmail);
+}
+
+.item-lazada {
+    background-color: var(--color-case-lazada);
+}
+
+.item-linkedin {
+    background-color: var(--color-social-linkedin);
+}
+
+.item-miravia {
+    background-color: var(--color-case-miravia);
+}
+
+.item-personal {
+    background-color: var(--color-case-personal);
+}
+
+.item-about {
+    background-color: var(--color-social-about);
+}
+
+.coverTransition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 999;
+    transition:
+        top 0.2s ease,
+        left 0.2s ease,
+        width 0.2s ease,
+        height 0.2s ease,
+        opacity 0.2s ease;
+    opacity: 0;
+}
+
+.whitetext {
+    color: var(--color-page-bg);
+}
+
+.navSection {
+    position: fixed;
+    width: 100%;
+    padding: var(--space-48) var(--space-48);
+}
+
+.backlink {
+    display: inline-block;
+    width: fit-content;
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-bold);
+}
+
+.caseSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-48);
+    width: 100%;
+    max-width: 960px;
+    justify-self: center;
+}
+
+.sectionText {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-48);
+    width: 100%;
+}
+
+.sectionText h0 {
+    font-size: var(--font-size-48);
+    font-weight: var(--font-weight-bold);
+}
+
+.sectionText b1 {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-medium);
+}
+
+.sectionImg img {
+    max-width: 100%;
+    height: auto;
+}
+
+.aboutHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: var(--space-24);
+}
+
+.aboutHeader b1 {
+    font-size: var(--font-size-32);
+    font-family: Garamond;
+}
+
+.space48 {
+    height: var(--space-48);
+}
+
+.caseFooter {
+    padding: 3rem 0 6rem 0;
+}
+
+.capsuleButton {
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-medium);
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 2px solid var(--color-font-dark);
+    border-radius: 999px;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.capsuleButton:hover {
+    background: var(--color-page-bg);
+    color: var(--color-font-dark);
+}
+
+.resumeDL {
+    display: inline;
+}
+
+.caseBackTransition {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #EDE9E5;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.caseBackTransition.active {
+    transform: translateY(0%);
+}
+
+:root {
+    --space-8: 0.5rem;
+    --space-12: 0.75rem;
+    --space-16: 1rem;
+    --space-24: 1.5rem;
+    --space-32: 2rem;
+    --space-48: 3rem;
+
+    --font-family-primary: Satoshi;
+    --font-family-secondary: Garamond;
+
+    --font-size-16: 1rem;
+    --font-size-24: 1.5rem;
+    --font-size-32: 2rem;
+    --font-size-48: 3rem;
+    --font-size-64: 4rem;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --color-font-dark: #1b1b1b;
+    --color-font-light: #f5f5f5;
+
+    --color-page-bg: #EDE9E5;
+    --color-case-tiktok: #2a2a2a;
+    --color-case-personal: #2DAE50;
+    --color-case-factorem: #4955FF;
+    --color-case-miravia: #8654E2;
+    --color-case-lazada: #EF3E64;
+    --color-social-about: #FFC445;
+    --color-social-gmail: #F9604B;
+    --color-social-linkedin: #3685EB;
+}
