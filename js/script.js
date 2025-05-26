@@ -1,16 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ─── Smooth scrolling setup ─────────────────────────────
-  const lenis = new Lenis({
-    lerp: 0.05,          // 0 < ⟶ < 1: lower = smoother 
-    wheelMultiplier: 1,  // Default scroll speed
-    smoothTouch: true    // Enable on touch devices
-  });
 
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
+  // 1) create one badge element
+  const badge = document.createElement('div');
+  badge.className = 'hover-badge';
+  document.body.append(badge);
+
+  // 2) wire up every cover
+  document.querySelectorAll('.cover').forEach(cover => {
+    const text = cover.dataset.badge;
+    if (!text) return;
+
+    cover.addEventListener('mouseenter', () => {
+      badge.textContent = text;
+      badge.classList.add('visible');
+    });
+
+    cover.addEventListener('mousemove', e => {
+      // offset it a bit so it doesn’t sit exactly under the cursor
+      badge.style.top  = (e.clientY + 15) + 'px';
+      badge.style.left = (e.clientX + 15) + 'px';
+    });
+
+    cover.addEventListener('mouseleave', () => {
+      badge.classList.remove('visible');
+    });
+  });
 
   const overlay = document.querySelector('.coverTransition');
   const links = document.querySelectorAll('.case-link');
@@ -79,6 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = backLink.getAttribute('href');
     }, { once: true });
   });
+
+  
 });
 
 window.addEventListener('pageshow', event => {

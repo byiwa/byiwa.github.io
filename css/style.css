@@ -156,8 +156,13 @@ a:visited {
     grid-column: span 2;
 }
 
+.small {
+    aspect-ratio: 1 / 1;
+}
+
 .link {
     border-radius: 50%;
+    aspect-ratio: 1 / 1;
 }
 
 .logo160 {
@@ -206,6 +211,23 @@ a:visited {
 
 .item-about {
     background-color: var(--color-social-about);
+}
+
+.hover-badge {
+  position: fixed;
+  pointer-events: none;
+  background: rgba(0,0,0,0.8);
+  color: var(--color-page-bg);
+  padding: var(--space-12) var(--space-12);
+  font-size: var(--font-size-24);
+  border-radius: 0 999px 999px 999px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  z-index: 999;
+}
+.hover-badge.visible {
+  opacity: 1;
 }
 
 .coverTransition {
@@ -367,3 +389,32 @@ a:visited {
     --color-social-gmail: #F9604B;
     --color-social-linkedin: #3685EB;
 }
+
+@media only screen and (max-width: 390px) {
+  /* allow the whole showcase to shrink under 780px */
+  .showcase {
+    min-width: auto;
+    padding-top: var(--space-48);
+    padding-bottom: var(--space-48);
+  }
+
+  /* switch to one column */
+  .showcaseContainer {
+    grid-template-columns: 1fr;
+    /* remove your 3-row definition so implicit rows flow */
+    grid-template-rows: none;
+    /* optional: tighten up your gap if you want */
+    gap: var(--space-8);
+  }
+
+  /* undo any spanning you did on .hero/.medium/etc so every item
+     just takes a single row */
+  .showcaseContainer .hero,
+  .showcaseContainer .medium {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .medium {
+    aspect-ratio: 1 / 1;
+  }
