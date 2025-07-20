@@ -25,10 +25,6 @@ a {
     color: var(--color-font-primary);
 }
 
-.casestudy:hover {
-    border-color: var(--color-font-primary);
-}
-
 .pageWrapper {
     padding: var(--space-24);
     width: 100vw;
@@ -102,6 +98,11 @@ a {
     height: var(--space-48);
     width: var(--space-48);
     border-radius: 100%;
+    transition: transform 0.15s ease;
+}
+
+.socialLink:hover {
+    transform: translateY(-4px);
 }
 
 .resume {
@@ -113,6 +114,12 @@ a {
     align-items: center;
     font-size: var(--font-size-16);
     font-weight: var(--font-weight-medium);
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.resume:hover {
+    background-color: var(--color-fill-brand);
+    transform: translateY(-4px);
 }
 
 .cardContent {
@@ -170,6 +177,18 @@ a {
     line-height: 108%;
 }
 
+.casestudy {
+  /* start with no inner border */
+  box-shadow: inset 0 0 0 0 var(--color-font-primary);
+  /* tell it to animate box-shadow changes */
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.casestudy:hover {
+    box-shadow: inset 0 0 0 2px var(--color-font-primary);
+    transform: translateY(-4px);
+}
+
 :root {
     --space-4: 0.25rem;
     --space-8: 0.5rem;
@@ -206,27 +225,27 @@ a {
 }
 
 @media (max-width: 780px) {
-  .pageGrid {
-    grid-template-columns: 1fr;
-    grid-template-rows:
-      auto  /* hero */
-      auto  /* tile1 */
-      auto  /* tile2 */
-      auto  /* tile3 */
-      auto; /* tile4 */
-    grid-template-areas:
-      "hero"
-      "tile1"
-      "tile2"
-      "tile3"
-      "tile4";
-    min-width: unset;
-    max-width: none;
-    min-height: unset;
-    max-height: none;
-  }
+    .pageGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows:
+            auto
+            auto
+            auto
+            auto
+            auto;
+        grid-template-areas:
+            "hero"
+            "tile1"
+            "tile2"
+            "tile3"
+            "tile4";
+        min-width: unset;
+        max-width: none;
+        min-height: unset;
+        max-height: none;
+    }
 
-  .hero .cardContent {
-    gap: var(--space-48);
-  }
+    .hero .cardContent {
+        gap: var(--space-48);
+    }
 }
