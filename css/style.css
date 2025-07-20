@@ -133,8 +133,8 @@ a {
 }
 
 .headerLogo {
-    height: var(--space-96);
-    width: var(--space-96);
+    height: var(--space-72);
+    width: var(--space-72);
     background-color: var(--color-fill-bg);
     border-radius: var(--radius-16);
 }
@@ -146,7 +146,7 @@ a {
 }
 
 .infoTitle {
-    font-size: var(--font-size-32);
+    font-size: var(--font-size-24);
     font-weight: var(--font-weight-bold);
     line-height: 108%;
 }
@@ -199,4 +199,30 @@ a {
     --color-fill-bg: #f5f5f5;
     --color-fill-white: #fff;
     --color-fill-brand: #b4dd13;
+}
+
+@media (max-width: 780px) {
+  .pageGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      auto  /* hero */
+      auto  /* tile1 */
+      auto  /* tile2 */
+      auto  /* tile3 */
+      auto; /* tile4 */
+    grid-template-areas:
+      "hero"
+      "tile1"
+      "tile2"
+      "tile3"
+      "tile4";
+    min-width: unset;
+    max-width: none;
+    min-height: unset;
+    max-height: none;
+  }
+
+  .hero .cardContent {
+    gap: var(--space-48);
+  }
 }
