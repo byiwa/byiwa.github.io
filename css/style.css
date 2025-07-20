@@ -220,9 +220,9 @@ a {
       "tile2"
       "tile3"
       "tile4";
-    min-width: none;
+    min-width: unset;
     max-width: none;
-    min-height: none;
+    min-height: unset;
     max-height: none;
   }
 
