@@ -174,7 +174,7 @@ a {
 }
 
 .tag {
-    padding: var(--space-4) var(--space-12);
+    padding: var(--space-4) var(--space-8);
     background-color: var(--color-fill-bg);
     font-size: var(--font-size-16);
     font-weight: var(--font-weight-medium);
@@ -230,6 +230,9 @@ a {
 }
 
 @media (max-width: 780px) {
+    .pageWrapper {
+        padding: var(--space-16);
+    }
     .pageGrid {
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: repeat(6, auto);
