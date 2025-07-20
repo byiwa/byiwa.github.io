@@ -228,11 +228,7 @@ a {
     .pageGrid {
         grid-template-columns: 1fr;
         grid-template-rows:
-            auto
-            auto
-            auto
-            auto
-            auto;
+            auto auto auto auto auto;
         grid-template-areas:
             "hero"
             "tile1"
@@ -247,5 +243,9 @@ a {
 
     .hero .cardContent {
         gap: var(--space-48);
+    }
+
+    .casestudy:hover {
+        box-shadow: inset 0 0 0 0 var(--color-font-primary);
     }
 }
