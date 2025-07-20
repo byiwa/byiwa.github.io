@@ -25,6 +25,10 @@ a {
     color: var(--color-font-primary);
 }
 
+.casestudy:hover {
+    border-color: var(--color-font-primary);
+}
+
 .pageWrapper {
     padding: var(--space-24);
     width: 100vw;
@@ -216,9 +220,9 @@ a {
       "tile2"
       "tile3"
       "tile4";
-    min-width: unset;
+    min-width: none;
     max-width: none;
-    min-height: unset;
+    min-height: none;
     max-height: none;
   }
 
