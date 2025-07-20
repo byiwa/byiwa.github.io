@@ -148,13 +148,15 @@ a {
     width: var(--space-72);
     background-color: var(--color-fill-bg);
     border-radius: var(--radius-16);
+    flex-shrink: 0;
 }
 
 .headerInfo {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    min-width: 0;
     gap: var(--space-12);
-    width: 100%;
 }
 
 .infoTitle {
