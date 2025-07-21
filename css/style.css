@@ -42,9 +42,7 @@ a {
         "hero tile1 tile2"
         "hero tile3 tile4";
     gap: var(--space-16);
-    min-width: 1280px;
     max-width: 1920px;
-    min-height: 560px;
     max-height: 1080px;
     margin: auto;
 }
@@ -211,6 +209,7 @@ a {
     --font-family-primary: Satoshi;
     --font-family-secondary: Garamond;
 
+    --font-size-12: 0.75rem;
     --font-size-16: 1rem;
     --font-size-24: 1.5rem;
     --font-size-32: 2rem;
