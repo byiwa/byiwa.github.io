@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-16);
+    color: var(--color-font-primary);
+    background-color: var(--color-fill-bg);
+    letter-spacing: -0.05em;
+}
+
+img {
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-font-primary);
+}
+
+:root {
+    --space-4: 0.25rem;
+    --space-8: 0.5rem;
+    --space-12: 0.75rem;
+    --space-16: 1rem;
+    --space-24: 1.5rem;
+    --space-32: 2rem;
+    --space-48: 3rem;
+    --space-72: 4.5rem;
+    --space-96: 6rem;
+
+    --radius-8: 0.5rem;
+    --radius-16: 1rem;
+    --radius-24: 1.5rem;
+
+    --font-family-primary: Satoshi;
+    --font-family-secondary: Garamond;
+
+    --font-size-12: 0.75rem;
+    --font-size-16: 1rem;
+    --font-size-24: 1.5rem;
+    --font-size-32: 2rem;
+    --font-size-48: 3rem;
+    --font-size-64: 4rem;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --color-font-primary: #1b1b1b;
+
+    --color-fill-bg: #f5f5f5;
+    --color-fill-white: #fff;
+    --color-fill-brand: #b4dd13;
+}
+
+.h0-bold {
+    font-size: var(--font-size-64);
+    font-weight: var(--font-weight-bold);
+}
+
+.button-medium {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-medium);
+}

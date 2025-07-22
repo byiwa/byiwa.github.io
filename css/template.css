@@ -1,0 +1,74 @@
+@import url('fonts.css');
+@import url('global.css');
+
+/*--------------------------
+  GLOBAL & SCROLL-SNAP SETUP
+---------------------------*/
+html,
+body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+/*--------------------------
+  LAYOUT & WRAPPERS
+---------------------------*/
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.navWrapper {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    padding: var(--space-24);
+    z-index: 999;
+}
+
+.caseContentWrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    max-width: 1920px;
+    align-items: center;
+    align-self: center;
+    padding: var(--space-24);
+    scroll-snap-align: start;
+}
+
+/*--------------------------
+  CONTENT STYLES
+---------------------------*/
+.caseContent {
+    opacity: 0;
+    transition: opacity 150ms linear;
+}
+
+.caseContent.is-loaded {
+    opacity: 1;
+}
+
+.caseContentText {
+    max-width: 1200px;
+    padding: var(--space-48);
+}
+
+.caseContentImg {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;                     /* fill the 100vh wrapper */
+    display: flex;                    /* center the image if you like */
+    align-items: center;
+    justify-content: center;
+}
+
+.caseContentImg img {
+    max-width: 100%;                  /* never exceed container width */
+    max-height: 100%;                 /* never exceed container height */
+    object-fit: contain;              /* maintain aspect ratio */
+}
