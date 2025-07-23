@@ -2,7 +2,7 @@
 @import url('global.css');
 
 /*--------------------------
-  GLOBAL & SCROLL-SNAP SETUP
+  SCROLL-SNAP SETUP
 ---------------------------*/
 html,
 body {
@@ -43,7 +43,7 @@ body {
 }
 
 /*--------------------------
-  CONTENT STYLES
+  PAGE LOAD & ANIMATIONS
 ---------------------------*/
 .caseContent {
     opacity: 0;
@@ -54,6 +54,9 @@ body {
     opacity: 1;
 }
 
+/*--------------------------
+  CONTENT STYLES
+---------------------------*/
 .caseContentText {
     max-width: 1200px;
     padding: var(--space-48);
@@ -62,16 +65,11 @@ body {
 .caseContentImg {
     width: 100%;
     max-width: 1920px;
-    height: 100%;                     /* fill the 100vh wrapper */
-    display: flex;                    /* center the image if you like */
+    height: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.caseContentImg img {
-    max-width: 100%;                  /* never exceed container width */
-    max-height: 100%;                 /* never exceed container height */
-    object-fit: contain;              /* maintain aspect ratio */
+    object-fit: contain;
 }
 
 @media (max-width: 780px) {

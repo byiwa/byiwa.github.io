@@ -4,106 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <script src="js/script.js"></script>
     <title>stateofbiying</title>
 </head>
 
 <body>
-    <main>
-        <div class="pageWrapper">
-            <div class="pageGrid">
-                <div class="hero card">
-                    <div class="cardContent">
-                        <div class="intro">
-                            <img src="./images/heroHeaderImg.png" class="heroImg">
-                            <div class="heroText">
-                                Hi, I’m Bing! I’m a product designer, freelance graphic artist, and hobby web developer.
-                            </div>
-                        </div>                        
-                        <div class="linkWrapper">
-                            <div class="externalLinkWrapper">
-                                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=biyingw@gmail.com" target="_blank"
-                        rel="noopener noreferrer">
-                                    <img src="./images/social/gmail.png" class="socialLink">
+    <main class="page">
+        <div class="page__wrapper">
+            <div class="grid">
+                <article class="grid__card grid__card--featured">
+                    <div class="grid__card-content">
+                        <div class="featured-header">
+                            <img src="./images/heroHeaderImg.png" alt="profile image" class="featured-header__img">
+                            <div class="featured-header__text h2-bold">Hi, I’m Bing! I’m a product designer, freelance
+                                graphic artist, and hobby web developer. </div>
+                        </div>
+                        <div class="featured-links">
+                            <div class="featured-links__social-links">
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="button button--type-round button--size-medium button--color-primary">
+                                    <img src="./images/social/gmail.png">
                                 </a>
-                                <a href="https://www.linkedin.com/in/wangbiying/" target="_blank"
-                        rel="noopener noreferrer">
-                                    <img src="./images/social/linkedin.png" class="socialLink">
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="button button--type-round button--size-medium button--color-primary">
+                                    <img src="./images/social/linkedin.png">
                                 </a>
-                                <a href="https://github.com/byiwa" target="_blank"
-                        rel="noopener noreferrer">
-                                    <img src="./images/social/github.png" class="socialLink">
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="button button--type-round button--size-medium button--color-primary">
+                                    <img src="./images/social/github.png">
                                 </a>
                             </div>
-                            <a href="https://drive.google.com/file/d/1o8Wa_zHPE7tFUpI1QtT80r1icK9BmGpN/view?usp=drive_link" target="_blank"
-                        rel="noopener noreferrer">
-                                <div class="resume">
-                                    RESUME
-                                </div>
-                            </a>                                
+                            <div class="featured-links__resume-download">
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="button button--type-capsule button--size-medium button--color-secondary">RESUME</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <a href="tiktok.html" class="tile1 card casestudy">
-                    <div class="cardContent">
-                        <div class="cardHeader">
-                            <img src="./images/logos/logoTikTok.png" class="headerLogo">
-                            <div class="headerInfo">
-                                <div class="infoTitle">TikTok</div>
-                                <div class="infoTags">
-                                    <div class="tag">SOCIAL</div>
-                                    <div class="tag">SEARCH ENGINE</div>
+                </article>
+                <article class="grid__card">
+                    <div class="grid__card-content">
+                        <div class="card-header">
+                            <img src="./images/logos/logoTikTok.png" class="card-header__logo">
+                            <div class="card-header__info-wrapper">
+                                <div class="card-header__title h2-bold">TikTok</div>
+                                <div class="card-header__tags">
+                                    <div class="tag body-medium">social</div>
+                                    <div class="tag body-medium">search engine</div>
                                 </div>
                             </div>
                         </div>
-                        <img src="./images/case cover/coverTikTok.png" class="cardImg">
+                        <img src="./images/case cover/coverTikTok.png" class="card-img">
                     </div>
-                </a>
-                <div class="tile2 card casestudy">
-                    <div class="cardContent">
-                        <div class="cardHeader">
-                            <img src="./images/logos/logoLazada.png" class="headerLogo">
-                            <div class="headerInfo">
-                                <div class="infoTitle">Lazada</div>
-                                <div class="infoTags">
-                                    <div class="tag">ECOMMERCE</div>
-                                    <div class="tag">LOCALISATION</div>
+                </article>
+                <article class="grid__card">
+                    <div class="grid__card-content">
+                        <div class="card-header">
+                            <img src="./images/logos/logoLazada.png" class="card-header__logo">
+                            <div class="card-header__info-wrapper">
+                                <div class="card-header__title h2-bold">Lazada</div>
+                                <div class="card-header__tags">
+                                    <div class="tag body-medium">ecommerce</div>
+                                    <div class="tag body-medium">localisation</div>
                                 </div>
                             </div>
                         </div>
-                        <img src="./images/case cover/coverMiravia.png" class="cardImg">
+                        <img src="./images/case cover/coverMiravia.png" class="card-img">
                     </div>
-                </div>
-                <div class="tile3 card casestudy">
-                    <div class="cardContent">
-                        <div class="cardHeader">
-                            <img src="./images/logos/logoFactorem.png" class="headerLogo">
-                            <div class="headerInfo">
-                                <div class="infoTitle">Factorem</div>
-                                <div class="infoTags">
-                                    <div class="tag">MANUFACTURING</div>
-                                    <div class="tag">DASHBOARD</div>
+                </article>
+                <article class="grid__card">
+                    <div class="grid__card-content">
+                        <div class="card-header">
+                            <img src="./images/logos/logoFactorem.png" class="card-header__logo">
+                            <div class="card-header__info-wrapper">
+                                <div class="card-header__title h2-bold">Factorem</div>
+                                <div class="card-header__tags">
+                                    <div class="tag body-medium">manufacturing</div>
+                                    <div class="tag body-medium">dashboard</div>
                                 </div>
                             </div>
                         </div>
-                        <img src="./images/case cover/coverFactorem.png" class="cardImg">
+                        <img src="./images/case cover/coverFactorem.png" class="card-img">
                     </div>
-                </div>
-                <div class="tile4 card">
-                    <div class="cardContent">
-                        <div class="cardHeader">
-                            <img src="./images/logos/logoPersonal.png" class="headerLogo">
-                            <div class="headerInfo">
-                                <div class="infoTitle">Personal</div>
-                                <div class="infoTags">
-                                    <div class="tag">JUST FOR FUN</div>
+                </article>
+                <article class="grid__card">
+                    <div class="grid__card-content">
+                        <div class="card-header">
+                            <img src="./images/logos/logoPersonal.png" class="card-header__logo">
+                            <div class="card-header__info-wrapper">
+                                <div class="card-header__title h2-bold">Personal</div>
+                                <div class="card-header__tags">
+                                    <div class="tag body-medium">just for fun</div>
                                 </div>
                             </div>
                         </div>
-                        <img src="./images/case cover/coverPersonal.png" class="cardImg">
+                        <img src="./images/case cover/coverPersonal.png" class="card-img">
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </main>
