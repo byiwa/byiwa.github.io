@@ -52,12 +52,13 @@
     width: 100vw;
 
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(-24px);
     transition: opacity 300ms ease, transform 300ms ease;
 
     scroll-snap-align: start;
 }
 .case-content__text {
+    padding-left: var(--space-48);
     max-width: 960px;
 }
 
