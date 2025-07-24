@@ -30,6 +30,14 @@
     gap: var(--space-16);
 }
 
+.grid a {
+    transition: transform 150ms ease;
+}
+
+.grid a:hover {
+    transform: translateY(-4px);
+}
+
 /*--------------------------
   CARD STYLES
 ---------------------------*/
@@ -39,6 +47,19 @@
     padding: var(--space-16);
     height: 100%;
     overflow: hidden;
+
+    transform: scale(0);
+    transition: transform 300ms ease-out;
+
+}
+.grid__card.pop-in {
+    transform: scale(1);
+}
+
+.grid__card.pop-out,
+.grid__card.pop-out:hover {
+  transform: scale(0);
+  pointer-events: none;
 }
 
 .grid__card--featured {
