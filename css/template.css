@@ -89,6 +89,7 @@
     max-height: 960px;
     width: auto;
     height: auto;
+    padding: var(--space-48) var(--space-72);
 }
 
 .case-content__img img {
