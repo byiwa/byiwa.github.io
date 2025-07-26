@@ -98,13 +98,19 @@ a {
     line-height: 108%;
 }
 
-.body-large {
+.b1-bold {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-bold);
+    line-height: 108%;
+}
+
+.b1-medium {
     font-size: var(--font-size-24);
     font-weight: var(--font-weight-medium);
     line-height: 108%;
 }
 
-.body-medium {
+.b2-medium {
     font-size: var(--font-size-16);
     font-weight: var(--font-weight-medium);
     line-height: 108%;
@@ -154,4 +160,13 @@ a {
 
 .button--color-secondary {
     background-color: var(--color-fill-bg);
+}
+
+.text-link {
+    text-decoration: underline;
+    transition: transform 150ms ease;
+}
+
+.text-link:hover {
+    transform: translateX(12px);
 }
