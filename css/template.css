@@ -120,3 +120,60 @@
   opacity: 0;
   transform: translateX(-50px);
 }
+
+/*--------------------------
+  BREAKPOINT
+---------------------------*/
+@media screen and (max-width: 780px) {
+
+    .page__wrapper {
+        scroll-snap-type: none;
+        padding: var(--space-48) 0;
+    }
+
+    .case-content{
+        padding: var(--space-72) 0 0 0;
+        height: auto;
+        scroll-snap-align: none;
+    }
+
+    .case-content__text-wrapper {
+        padding: var(--space-24);
+        gap: var(--space-12);
+    }
+
+    .case-content__summary {
+        gap: var(--space-16);
+        flex-direction: column;
+        gap: var(--space-12);
+    }
+
+    .case-content__summary-column {
+        padding-top: var(--space-16);
+    }
+
+    .case-content__img {
+        padding: 0;
+    }
+
+    .case-content__img img {
+        height: auto;
+        width: 100%;
+    }
+
+    .h1-bold {
+        font-size: var(--font-size-24);
+    }
+
+    .h2-bold {
+        font-size: var(--font-size-24);
+    }
+
+    .b1-bold {
+        font-size: var(--font-size-12);
+    }
+
+    .b1-medium {
+        font-size: var(--font-size-16);
+    }
+}

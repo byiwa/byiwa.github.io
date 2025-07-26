@@ -149,3 +149,27 @@
 .card-img {
     border-radius: var(--radius-16);
 }
+
+/*--------------------------
+  BREAKPOINT
+---------------------------*/
+@media screen and (max-width: 780px) {
+    .page {
+        width: 100%;
+        height: auto;
+        min-width: auto;
+        min-height: auto;
+    }
+
+    .page__wrapper {
+        padding: var(--space-16);
+        width: 100%;
+        height: 100%;
+        max-height: none;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
